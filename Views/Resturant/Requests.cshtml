@@ -1,0 +1,39 @@
+﻿@model List<Zero_Hunger.Models.Request>
+@{
+    ViewBag.Title = "Requests";
+    Layout = "~/Views/Shared/_LayoutResturant.cshtml";
+}
+
+
+<h2>Posted Requests</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>FoodName</th>
+            <th>FoodRequestID</th>
+            <th>Quantity</th>
+            <th>PostStatus</th>
+            <th>Location</th>
+            <th>AssingedEmployee</th>
+            <th>ResturantID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r2 in Model)
+        {
+            <tr>
+                <td>@r2.FoodName</td>
+                <td> @r2.FoodRequestID </td>
+                <td> @r2.Quantity </td>
+                <td> @r2.PostStatus </td>
+                <td> @r2.Location </td>
+                <td> @r2.AssingedEmployee </td>
+                <td> @r2.ResturantID </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
